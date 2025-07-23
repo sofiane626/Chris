@@ -114,6 +114,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(newAppointment);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.error("Erreur lors de la création du rendez-vous:", error);
 

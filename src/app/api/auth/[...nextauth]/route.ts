@@ -51,6 +51,7 @@ export const authOptions: NextAuthOptions = {
     // ✅ Callback JWT unifié pour Google + Credentials
     async jwt({ token, user, account, trigger }) {
       // Première connexion (user object présent)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (user) {
         token.id = user.id;
         token.email = user.email!;
@@ -92,6 +93,7 @@ export const authOptions: NextAuthOptions = {
     async session({ session, token, user }) {
       if (session.user) {
         // Pour Google OAuth (avec adapter), utiliser user
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if (user) {
           session.user.id = user.id;
           session.user.email = user.email;

@@ -131,7 +131,7 @@ export default function AdminPage() {
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           >
-            <option value="jour">Aujourd'hui</option>
+            <option value="jour">Aujourdn&apos;hui</option>
             <option value="semaine">Cette semaine</option>
             <option value="mois">Ce mois-ci</option>
             <option value="tous">Tous les rendez-vous</option>
